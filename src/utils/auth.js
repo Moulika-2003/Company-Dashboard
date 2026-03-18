@@ -2,7 +2,7 @@ function validatePassword(password) {
   const hasUpper = /[A-Z]/.test(password);
   const hasLower = /[a-z]/.test(password);
   const hasNumber = /[0-9]/.test(password);
-  const hasSpecial = /[!@#$%^&*()_\-+=\[\]{};:'",.<>\/?\\|`~]/.test(password);
+  const hasSpecial = /[!@#$%^&*()_\-+=[\]{};:'",.<>/?\\|`~]/.test(password);
   const longEnough = password.length >= 8;
   return hasUpper && hasLower && hasNumber && hasSpecial && longEnough;
 }
